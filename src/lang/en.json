@@ -1,0 +1,6 @@
+{
+	"Logo": "LOGO",
+	"Error": {
+		"AuthNotExist": "You are not logined firebase yet."
+	}
+}

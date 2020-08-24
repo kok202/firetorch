@@ -1,0 +1,10 @@
+{
+	"Logo": "로고",
+	"Error": {
+		"EmailRequired": "이메일 필드가 필요합니다.",
+		"EmailPattern": "이메일 패턴이 일치하지 않습니다.",
+		"PasswordRequired": "패스워드가 필요합니다..",
+		"UserNicknameRequired": "유저 닉네임 필드가 필요합니다.",
+		"AuthNotExist": "파이어베이스에 로그인 되어있지 않습니다."
+	}
+}
