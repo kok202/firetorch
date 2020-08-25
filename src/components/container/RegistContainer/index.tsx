@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import UserRegist from 'src/components/presentation/UserRegist';
+import Regist from 'src/components/presentation/Regist';
 import { useForm } from 'react-hook-form';
 import useFormat from 'src/hooks/useFormat';
 import User from 'src/domain/User';
@@ -11,7 +11,7 @@ import CONSTANTS from 'src/utils/Constants';
 
 interface Props {}
 
-const UserRegistContainer = (props: Props) => {
+const RegistContainer = (props: Props) => {
 	const { format } = useFormat();
 	const { register, handleSubmit } = useForm();
 	const rootStore = useStore();
@@ -38,7 +38,7 @@ const UserRegistContainer = (props: Props) => {
 	});
 
 	return (
-		<UserRegist
+		<Regist
 			errorMessage={errorMessage}
 			register={register}
 			handleSubmit={handleSubmit(handleRegistUser)}
@@ -46,4 +46,4 @@ const UserRegistContainer = (props: Props) => {
 	);
 };
 
-export default observer(UserRegistContainer);
+export default observer(RegistContainer);

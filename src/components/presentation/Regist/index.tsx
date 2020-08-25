@@ -10,7 +10,7 @@ interface Props {
 	handleSubmit: (data: any) => any;
 }
 
-const UserRegist = (props: Props) => {
+const Regist = (props: Props) => {
 	return (
 		<Container>
 			<form onSubmit={props.handleSubmit}>
@@ -39,11 +39,11 @@ const UserRegist = (props: Props) => {
 	);
 };
 
-UserRegist.defaultProps = {
+Regist.defaultProps = {
 	minNicknameLength: 4,
 	maxNicknameLength: 16,
 	register: () => {},
 	handleSubmit: () => {},
 };
 
-export default UserRegist;
+export default Regist;

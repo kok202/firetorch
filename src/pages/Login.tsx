@@ -1,10 +1,10 @@
 import React from 'react';
-import UserLoginContainer from 'src/components/container/UserLoginContainer';
+import LoginContainer from 'src/components/container/LoginContainer';
 
 interface Props {}
 
 const UserLoginPage = (props: Props) => {
-	return <UserLoginContainer />;
+	return <LoginContainer />;
 };
 
 export default UserLoginPage;

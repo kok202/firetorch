@@ -1,10 +1,10 @@
 import React from 'react';
-import UserRegistContainer from 'src/components/container/UserRegistContainer';
+import RegistContainer from 'src/components/container/RegistContainer';
 
 interface Props {}
 
 const UserRegistPage = (props: Props) => {
-	return <UserRegistContainer />;
+	return <RegistContainer />;
 };
 
 export default UserRegistPage;

@@ -5,14 +5,9 @@ export const Container = styled.div`
 	text-align: center;
 
 	.App-logo {
-		height: 40vmin;
+		height: 180px;
+		margin-bottom: 64px;
 		pointer-events: none;
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.App-logo {
-			animation: App-logo-spin infinite 20s linear;
-		}
 	}
 
 	.App-header {

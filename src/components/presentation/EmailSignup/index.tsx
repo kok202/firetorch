@@ -6,16 +6,14 @@ interface Props {
 	emailPattern: RegExp;
 	minPasswordLength: number;
 	errorMessage?: string;
-	handleEmailSignup: () => any;
-	handleEmailLoginSubmit: (data: any) => any;
-	handleGoogleLogin: () => any;
+	handleEmailSignupSubmit: (data: any) => any;
 	register: (...p: any[]) => any;
 }
 
-const UserLogin = (props: Props) => {
+const EmailSignup = (props: Props) => {
 	return (
 		<Container>
-			<form onSubmit={props.handleEmailLoginSubmit}>
+			<form onSubmit={props.handleEmailSignupSubmit}>
 				<div className="row">
 					<div className="label">email</div>
 					<input
@@ -41,32 +39,20 @@ const UserLogin = (props: Props) => {
 				</div>
 				{props.errorMessage && <div className="error">{props.errorMessage}</div>}
 				<div className="row">
-					<button className="email-signup" type="button" onClick={props.handleEmailSignup}>
+					<button className="email-signup" type="submit">
 						Sign up
 					</button>
 				</div>
-				<div className="row">
-					<button className="email-login" type="submit">
-						Email login
-					</button>
-				</div>
 			</form>
-			<div className="row">
-				<div className="google-login" onClick={props.handleGoogleLogin}>
-					Google login
-				</div>
-			</div>
 		</Container>
 	);
 };
 
-UserLogin.defaultProps = {
+EmailSignup.defaultProps = {
 	emailPattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 	minPasswordLength: 6,
-	handleEmailSignup: () => {},
-	handleEmailLoginSubmit: () => {},
-	handleGoogleLogin: () => {},
+	handleEmailSignupSubmit: () => {},
 	register: () => {},
 };
 
-export default UserLogin;
+export default EmailSignup;

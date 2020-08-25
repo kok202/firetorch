@@ -13,11 +13,11 @@ class CONSTANTS {
 	static readonly URL_COUNTER = '/counter';
 	static readonly URL_USER = '/user';
 	static readonly URL_USER_ME = '/user/me';
-	static readonly URL_USER_LOGIN = '/user/login';
-	static readonly URL_USER_REGIST = '/user/regist';
-	static readonly URL_USER_SIGNUP = '/user/signup';
-	static readonly URL_USER_MODIFY = '/user/modify';
 	static readonly URL_USER_INFO = '/user/:nickname';
+	static readonly URL_USER_MODIFY = '/user/me/modify';
+	static readonly URL_LOGIN = '/login';
+	static readonly URL_REGIST = '/regist';
+	static readonly URL_SIGNUP = '/signup';
 }
 
 export default CONSTANTS;

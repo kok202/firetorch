@@ -8,7 +8,7 @@ interface Props {}
 
 const UserPage = (props: Props) => {
 	const rootStore = useStore();
-	if (!rootStore.authStore.isLogined()) return <Redirect to={CONSTANTS.URL_USER_LOGIN} />;
+	if (!rootStore.authStore.isLogined()) return <Redirect to={CONSTANTS.URL_LOGIN} />;
 	return <Redirect to={CONSTANTS.URL_USER_ME} />;
 };
 

@@ -5,11 +5,11 @@ import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import useFormat from 'src/hooks/useFormat';
 import CONSTANTS from 'src/utils/Constants';
-import UserEmailSignup from 'src/components/presentation/UserEmailSignup';
+import EmailSignup from 'src/components/presentation/EmailSignup';
 
 interface Props {}
 
-const UserEmailSignupContainer = (props: Props) => {
+const EmailSignupContainer = (props: Props) => {
 	const rootStore = useStore();
 	const history = useHistory();
 	const { format } = useFormat();
@@ -21,16 +21,16 @@ const UserEmailSignupContainer = (props: Props) => {
 		const password = data.password;
 		rootStore.authStore
 			.dispatchEmailSignup(email, password)
-			.then(() => history.push(CONSTANTS.URL_USER_LOGIN))
+			.then(() => history.push(CONSTANTS.URL_LOGIN))
 			.catch(error => setErrorMessage(format(error.message)));
 	}, []);
 
 	useEffect(() => {
-		if (rootStore.authStore.isLogined()) history.push(CONSTANTS.URL_USER_LOGIN);
+		if (rootStore.authStore.isLogined()) history.push(CONSTANTS.URL_LOGIN);
 	}, []);
 
 	return (
-		<UserEmailSignup
+		<EmailSignup
 			errorMessage={errorMessage}
 			emailPattern={CONSTANTS.EMAIL_REGEXP}
 			minPasswordLength={CONSTANTS.MIN_PASSWORD_LENGTH}
@@ -40,4 +40,4 @@ const UserEmailSignupContainer = (props: Props) => {
 	);
 };
 
-export default observer(UserEmailSignupContainer);
+export default observer(EmailSignupContainer);

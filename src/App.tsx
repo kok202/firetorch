@@ -5,13 +5,13 @@ import AboutPage from 'src/pages/About';
 import CounterPage from 'src/pages/Counter';
 import NotFoundPage from 'src/pages/NotFound';
 import NavigationBar from 'src/components/presentation/NavigationBar';
-import UserLoginPage from 'src/pages/user/Login';
+import UserLoginPage from 'src/pages/Login';
 import UserMePage from './pages/user/Me';
-import UserRegistPage from './pages/user/Regist';
+import UserRegistPage from './pages/Regist';
 import UserPage from './pages/User';
 import { observer } from 'mobx-react';
 import useStore from './hooks/useStore';
-import UserSignupPage from './pages/user/Signup';
+import UserSignupPage from './pages/Signup';
 import UserInfoPage from './pages/user/Info';
 import UserModifyPage from './pages/user/Modify';
 import CONSTANTS from './utils/Constants';
@@ -30,10 +30,10 @@ const App = () => {
 				<Route path={CONSTANTS.URL_HOME} component={HomePage} />
 				<Route path={CONSTANTS.URL_ABOUT} component={AboutPage} />
 				<Route path={CONSTANTS.URL_COUNTER} component={CounterPage} />
+				<Route path={CONSTANTS.URL_LOGIN} component={UserLoginPage} />
+				<Route path={CONSTANTS.URL_SIGNUP} component={UserSignupPage} />
+				<Route path={CONSTANTS.URL_REGIST} component={UserRegistPage} />
 				<Route path={CONSTANTS.URL_USER_MODIFY} component={UserModifyPage} />
-				<Route path={CONSTANTS.URL_USER_SIGNUP} component={UserSignupPage} />
-				<Route path={CONSTANTS.URL_USER_REGIST} component={UserRegistPage} />
-				<Route path={CONSTANTS.URL_USER_LOGIN} component={UserLoginPage} />
 				<Route path={CONSTANTS.URL_USER_ME} component={UserMePage} />
 				<Route path={CONSTANTS.URL_USER_INFO} component={UserInfoPage} />
 				<Route path={CONSTANTS.URL_USER} component={UserPage} />
